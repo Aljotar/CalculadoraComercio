@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-export const Convenio = () => {
+export const Principal = () => {
     return (
         <View>
-            <Text>Convenio</Text>
+            <Text>Principal</Text>
         </View>
     )
 }
