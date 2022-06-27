@@ -6,6 +6,8 @@ import { Calculadora } from '../screens/Calculadora';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { StackPrincipal } from './StackPrincipal';
+import { CardStyleInterpolators } from '@react-navigation/stack';
+import { styles } from '../theme/appTheme';
 
 const Tab = createBottomTabNavigator();
 
@@ -48,7 +50,7 @@ export const Tabs = () => {
         tabBarStyle: {
           height: 60,
           backgroundColor: '#EDEDED'
-        }
+        },
         
       })}
     >

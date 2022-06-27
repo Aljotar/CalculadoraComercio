@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native'
-import { TextInput } from 'react-native-gesture-handler';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { ScrollView, TextInput } from 'react-native-gesture-handler';
 
 interface Fecha {
   año: string,
@@ -40,53 +40,58 @@ export const VacacionesScreen = () => {
     const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
 
     return Math.ceil((utc2 - utc1) / _MS_PER_YEAR);
-}
+  }
 
   return (
     <View>
-      <TextInput
-        style={styles.inputStyle}
-        placeholder='Año'
-        keyboardType='numeric'
-        autoCapitalize='none'
-        autoCorrect={false}
-        onChangeText={text => setFecha({ ...fecha, año: text })}
-        value={fecha.año}
-        maxLength={4}
-      >
+      <ScrollView
 
-      </TextInput>
-      <TextInput
-        style={styles.inputStyle}
-        placeholder='Mes'
-        keyboardType='numeric'
-        autoCapitalize='none'
-        autoCorrect={false}
-        onChangeText={text => setFecha({ ...fecha, mes: text })}
-        value={fecha.mes}
-        maxLength={2}
       >
+        <TextInput
+          style={styles.inputStyle}
+          placeholder='Año'
+          keyboardType='numeric'
+          autoCapitalize='none'
+          autoCorrect={false}
+          onChangeText={text => setFecha({ ...fecha, año: text })}
+          value={fecha.año}
+          maxLength={4}
+        >
 
-      </TextInput>
-      <TextInput
-        style={styles.inputStyle}
-        placeholder='Día'
-        keyboardType='numeric'
-        autoCapitalize='none'
-        autoCorrect={false}
-        onChangeText={text => setFecha({ ...fecha, dia: text })}
-        value={fecha.dia}
-        maxLength={2}
-      >
-      </TextInput>
+        </TextInput>
+        <TextInput
+          style={styles.inputStyle}
+          placeholder='Mes'
+          keyboardType='numeric'
+          autoCapitalize='none'
+          autoCorrect={false}
+          onChangeText={text => setFecha({ ...fecha, mes: text })}
+          value={fecha.mes}
+          maxLength={2}
+        >
 
-      <TouchableHighlight
-        onPress={() => calcularAntiguedad()}
-      >
-        <Text>CONSULTAR</Text>
-      </TouchableHighlight>
+        </TextInput>
+        <TextInput
+          style={styles.inputStyle}
+          placeholder='Día'
+          keyboardType='numeric'
+          autoCapitalize='none'
+          autoCorrect={false}
+          onChangeText={text => setFecha({ ...fecha, dia: text })}
+          value={fecha.dia}
+          maxLength={2}
+        >
+        </TextInput>
 
-      <Text></Text>
+        <TouchableHighlight
+          onPress={() => calcularAntiguedad()}
+        >
+          <Text>CONSULTAR</Text>
+        </TouchableHighlight>
+
+        <Text></Text>
+
+      </ScrollView>
 
     </View>
   )
