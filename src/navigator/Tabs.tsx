@@ -33,7 +33,7 @@ export const Tabs = () => {
           // You can return any component that you like here!
           return <Icon name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: 'tomato',
+        tabBarActiveTintColor: '#726EFF',
         tabBarInactiveTintColor: 'gray',
         tabBarIconStyle: {
             marginTop: 5
