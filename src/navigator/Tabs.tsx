@@ -1,15 +1,16 @@
-import * as React from 'react';
+import  React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Principal } from '../screens/Principal';
 import { Noticias } from '../screens/Noticias';
 import { Calculadora } from '../screens/Calculadora';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import { StackPrincipal } from './StackPrincipal';
 
 const Tab = createBottomTabNavigator();
 
 export const Tabs = () => {
+  
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -51,10 +52,15 @@ export const Tabs = () => {
         
       })}
     >
-      <Tab.Screen name="Principal" component={Principal} />
-      <Tab.Screen name="Calculadora" component={Calculadora} />
-      <Tab.Screen name="Noticias" component={Noticias} />
+
+
+      <Tab.Screen name="Principal" component={ StackPrincipal } options={{
+          tabBarLabel: "Principal"
+      }}/>
+      <Tab.Screen name="Calculadora" component={ Calculadora } />
+      <Tab.Screen name="Noticias" component={ Noticias } />
+
+
     </Tab.Navigator>
   );
 }
-

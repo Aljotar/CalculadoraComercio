@@ -1,12 +1,21 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { VacacionesScreen } from '../screens/VacacionesScreen';
+
+
+
 
 export const ItemsHome = () => {
+
+    const navigation = useNavigation()
+
     return (
         <View style={{ flex: 1, flexDirection: 'row' }} >
             <View>
                 <TouchableOpacity
+                    onPress={() => navigation.navigate('VacacionesScreen')}
                     style={style.item}
                 >
                     <View style={style.boxStyle}>
