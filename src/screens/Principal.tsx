@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { ItemsHome } from '../components/ItemsHome';
-import { styles } from '../theme/appTheme';
+import { style } from '../theme/appTheme';
 import LinearGradient from 'react-native-linear-gradient';
 import { GradientBackground } from '../components/GradientBackground';
 
@@ -10,16 +10,18 @@ import { GradientBackground } from '../components/GradientBackground';
 export const Principal = () => {
     return (
         <GradientBackground>
-            <View style={styles.animacionStyle}>
-                <Text style={styles.homeText}>EMPELADO DE COMERCIO</Text>
-                <Text style={{ fontWeight: '600', marginTop: 5, color: '#F4F3FD' }}>¡Informacion relevante para trabajadores de comercio!</Text>
+            <View style={style.banner}>
+            </View>
+            <View style={style.animacionStyle}>
+                <Text style={style.homeText}>EMPELADO DE COMERCIO</Text>
+                <Text style={{ fontWeight: '600', marginTop: 5, color: '#727BFE' }}>¡Informacion relevante para trabajadores de comercio!</Text>
                 <LottieView style={{ width: 250 }}
                     source={require('../assets/lottie/workHome.json')}
                     autoPlay
 
                 />
             </View>
-            <View style={styles.itemsStyle}>
+            <View style={style.itemsStyle}>
                 <ItemsHome />
             </View>
         </GradientBackground>
