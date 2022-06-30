@@ -13,6 +13,11 @@ export const VacacionesScreen = () => {
     mes: string,
     dia: string,
   }
+  interface Vacaciones {
+    vacaciones: number,
+  }
+
+  const [vacaciones, setVacaciones] = useState<Vacaciones>()
 
   const [fecha, setFecha] = useState<Fecha>({
     año: '',
@@ -30,10 +35,27 @@ export const VacacionesScreen = () => {
     const añoActual = new Date().getUTCFullYear();
     const fechaMedicion = new Date(añoActual, 11, 31);
 
-    const resultado = dateDifference(fechaMedicion, fechaIngreso)
+    const resultado = dateDifference(fechaMedicion, fechaIngreso);
 
-    console.log(resultado)
+    setVacaciones(resultado);
 
+
+
+  }
+
+  const VacacionesPorAntiguedad = () => {
+
+    if (vacaciones < 5 && vacaciones > 0) {
+      return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 14 DIAS DE VACACIONES</Text>
+
+    } else if (vacaciones < 10 && vacaciones > 5) {
+      return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 21 DIAS DE VACACIONES</Text>
+
+    } else if (vacaciones < 20 && vacaciones > 10) {
+      return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 28 DIAS DE VACACIONES</Text>
+
+    } else ( vacaciones > 20)
+    return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 35 DIAS DE VACACIONES</Text>
   }
 
   function dateDifference(date2: Date, date1: Date): number {
@@ -43,7 +65,7 @@ export const VacacionesScreen = () => {
     const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
     const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
 
-    return Math.ceil((utc2 - utc1) / _MS_PER_YEAR);
+    return Math.floor((utc2 - utc1) / _MS_PER_YEAR);
   }
 
   return (
@@ -70,7 +92,6 @@ export const VacacionesScreen = () => {
         <Text style={styles.resStyle}><Icon
           name="bookmark-outline" size={14} color="#6E6AF9" /> 35 días corridos con una antigüedad mayor a 20 años</Text>
       </View>
-
       <View style={styles.container2}>
         <Text style={styles.questStyle}>CUALES SON LOS REQUISITOS PARA SU GOCE<Icon
           name="help-outline" size={20} color="#6E6AF9" /></Text>
@@ -81,7 +102,6 @@ export const VacacionesScreen = () => {
         <Text style={styles.resStyle}><Icon
           name="bookmark-outline" size={14} color="#6E6AF9" /> La licencia comenzará en día lunes o el siguiente hábil si aquél fuese feriado</Text>
       </View>
-
       <View>
         <Text style={{ color: '#6E6AF9', alignSelf: 'center', marginTop: 20, fontWeight: '700' }}>CUESTIONES IMPORTANTES <Icon
           name="hand-left-outline" size={20} color="#6E6AF9" /></Text>
@@ -99,9 +119,15 @@ export const VacacionesScreen = () => {
           name="remove-outline" size={14} color="#6E6AF9" /> Para determinar la extensión de las vacaciones atendiendo a la antigüedad en el empleo, se computará como tal aquélla que tendría el trabajador al 31 de diciembre del año que correspondan las mismas</Text>
       </View>
 
+      <View style={styles.container3}>
+        <Text style={{ fontSize: 16, fontWeight: '700', alignSelf: 'center', marginTop: 4 }}>CALCULAR VACACIONES DEL AÑO VIGENTE</Text>
+        <Text style={{ fontSize: 14, fontWeight: '400', alignSelf: 'center' }}>COMPLETAR CON LA FECHA DE INGRESO AL EMPLEO</Text>
+      </View>
+
       <View>
-        <Text style={{ fontSize: 16, fontWeight: '700', alignSelf: 'center' }}>CALCULAR VACACIONES DEL AÑO VIGENTE</Text>
-        <Text style={{ fontSize: 14, fontWeight: '400', alignSelf: 'center' }}>INGRESA LA FECHA DE INGRESO AL EMPLEO</Text>
+        {
+          VacacionesPorAntiguedad()
+        }
       </View>
 
 
@@ -193,6 +219,23 @@ const styles = StyleSheet.create({
 
     elevation: 10,
   },
+  container3: {
+    height: 50,
+    backgroundColor: '#E3E3E3',
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 30,
+    alignSelf: 'center',
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.20,
+    shadowRadius: 11.41,
+
+    elevation: 10,
+  },
   questStyle: {
     fontSize: 14,
     fontWeight: '400',
@@ -210,6 +253,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 20,
     fontWeight: '600'
+  },
+  cantVacaciones: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    marginTop: 20,
+    color: '#578DF2',
   }
 })
 
