@@ -73,7 +73,7 @@ export const VacacionesScreen = () => {
       <View style={style.banner}>
       </View>
       <View style={styles.container1}>
-        <Text style={{ fontSize: 20, fontWeight: '500' }}>SOBRE LAS VACACIONES</Text>
+        <Text style={style.titleStyle}>SOBRE LAS VACACIONES</Text>
         <LottieView style={{ width: 180, alignSelf: 'center' }}
           source={require('../assets/lottie/questionanimation.json')}
           autoPlay

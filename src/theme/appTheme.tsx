@@ -31,5 +31,10 @@ export const style = StyleSheet.create({
         fontSize: 17,
         fontWeight: 'bold',
         color: '#313131',
+    },
+    titleStyle: {
+        fontSize: 20, 
+        fontWeight: '500',
+        alignSelf: 'center'
     }
 });
