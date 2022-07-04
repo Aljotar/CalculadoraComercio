@@ -9,10 +9,7 @@ import { Licencias } from '../screens/Licencias';
 export type RootStackParams = {
     VacacionesScreen: undefined,
     Principal: undefined,
-<<<<<<< HEAD
-=======
     Licencias: undefined
->>>>>>> calculadoraScreen
 }
 
 
