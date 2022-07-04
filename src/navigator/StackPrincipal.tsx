@@ -3,11 +3,16 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { VacacionesScreen } from '../screens/VacacionesScreen';
 import { Principal } from '../screens/Principal';
+import { Licencias } from '../screens/Licencias';
 
 
 export type RootStackParams = {
     VacacionesScreen: undefined,
     Principal: undefined,
+<<<<<<< HEAD
+=======
+    Licencias: undefined
+>>>>>>> calculadoraScreen
 }
 
 
@@ -25,6 +30,7 @@ export const StackPrincipal = () => {
     >
         <Stack.Screen name="Principal" component={ Principal } />
         <Stack.Screen name="VacacionesScreen" component={ VacacionesScreen } />
+        <Stack.Screen name="Licencias" component={ Licencias } />
     </Stack.Navigator>
   );
 }

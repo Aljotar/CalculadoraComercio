@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { VacacionesScreen } from '../screens/VacacionesScreen';
+import { Licencias } from '../screens/Licencias';
 
 
 
@@ -65,6 +66,7 @@ export const ItemsHome = () => {
 
             <View >
                 <TouchableOpacity
+                    onPress={() => navigation.navigate('Licencias')}
                     style={style.item}
                 >
                     <View style={style.boxStyle}>
