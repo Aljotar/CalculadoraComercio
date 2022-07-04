@@ -7,7 +7,7 @@ import { Principal } from '../screens/Principal';
 
 export type RootStackParams = {
     VacacionesScreen: undefined,
-    Principal: undefined
+    Principal: undefined,
 }
 
 

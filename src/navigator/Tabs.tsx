@@ -2,12 +2,10 @@ import  React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Noticias } from '../screens/Noticias';
-import { Calculadora } from '../screens/Calculadora';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import  { Calculadora }  from '../screens/Calculadora';
 import { StackPrincipal } from './StackPrincipal';
-import { CardStyleInterpolators } from '@react-navigation/stack';
-import { styles } from '../theme/appTheme';
 
 const Tab = createBottomTabNavigator();
 

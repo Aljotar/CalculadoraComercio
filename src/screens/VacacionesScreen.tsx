@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { ScrollView, TextInput } from 'react-native-gesture-handler'
-import { GradientBackground } from '../components/GradientBackground'
-import { Button, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { ScrollView, TextInput } from 'react-native-gesture-handler';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { style } from '../theme/appTheme';
 import Icon from 'react-native-vector-icons/Ionicons';
