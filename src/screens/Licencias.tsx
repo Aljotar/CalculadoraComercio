@@ -17,10 +17,14 @@ export const Licencias = () => {
                     autoPlay
 
                 />
-                <Text style={{
-                    ...style.homeText, alignSelf: 'center'
-                }}>Licencias especiales:</Text>
+
             </View>
+            <Text style={{
+                ...style.homeText, alignSelf: 'center'
+            }}>Licencias especiales:</Text>
+            <Text style={{
+                ...style.homeText, alignSelf: 'center'
+            }}>CONVENCION COLECTIVA DE TRABAJO Nº 130/75</Text>
             <View style={styles.container1}>
                 <Text style={{ marginTop: 10 }}><Icon
                     name="bookmark-outline" size={15} color="#6E6AF9" /> 12 días de licencia corridos por casamiento, con  goce  total  de  sus  remuneraciones</Text>
@@ -46,6 +50,8 @@ export const Licencias = () => {
                     name="bookmark-outline" size={15} color="#6E6AF9" /> 20  días  de licencia  como  máximo,  por  año,  para  los  estudiantes  universitarios  a  efectos  de preparar  sus  materias  y  rendir  exámenes,  pudiendo  solicitar  hasta  un  máximo  de  4 días  por  examen</Text>
                 <Text style={{ marginTop: 10 }}><Icon
                     name="bookmark-outline" size={15} color="#6E6AF9" /> 2 días corridos de licencia al empleado que deba mudarse de vivienda</Text>
+            </View>
+            <View style={style.banner} >
             </View>
         </ScrollView>
     )
