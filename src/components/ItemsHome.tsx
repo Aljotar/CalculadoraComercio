@@ -2,8 +2,6 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { VacacionesScreen } from '../screens/VacacionesScreen';
-import { Licencias } from '../screens/Licencias';
 
 
 
@@ -14,92 +12,46 @@ export const ItemsHome = () => {
 
     return (
         <View style={{ flex: 1, flexDirection: 'row' }} >
-            <View>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('VacacionesScreen')}
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="airplane-outline" size={30} color="#6E6AF9" />
-                        <Text style={style.textStyle} >VACACIONES</Text>
-                    </View>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="calculator-outline" size={30} color="#6E6AF9" />
-                        <Text style={style.textStyle} >CALCULADORA</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-
-
-
-            <View>
-                <TouchableOpacity
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="reader-outline" size={30} color="#6E6AF9" />
-                        <Text style={style.textStyle} >CONVENIO</Text>
-                    </View>
-                </TouchableOpacity>
-
-
-
-                <TouchableOpacity
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="cash-outline" size={30} color="#6E6AF9" />
-                        <Text style={style.textStyle}>SALARIO</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-
-
-            <View >
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Licencias')}
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="body-outline" size={30} color="#6E6AF9" />
-                            <Text style={style.textStyle}>LICENCIAS</Text>
-                    </View>
-                </TouchableOpacity>
-
-
-                <TouchableOpacity
-                    style={style.item}
-                >
-                    <View style={style.boxStyle}>
-                        <Icon
-                            name="megaphone-outline" size={30} color="#6E6AF9" />
-                            <Text style={style.textStyle}>FERIADOS</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-
-
+            <TouchableOpacity
+                onPress={() => navigation.navigate('VacacionesScreen')}
+                style={style.item}
+            >
+                <View style={style.boxStyle}>
+                    <Icon
+                        name="airplane-outline" size={30} color="#6E6AF9" />
+                    <Text style={style.textStyle} >VACACIONES</Text>
+                </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={style.item}
+            >
+                <View style={style.boxStyle}>
+                    <Icon
+                        name="cash-outline" size={30} color="#6E6AF9" />
+                    <Text style={style.textStyle} >ESCALA</Text>
+                </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Licencias')}
+                style={style.item}
+            >
+                <View style={style.boxStyle}>
+                    <Icon
+                        name="body-outline" size={30} color="#6E6AF9" />
+                    <Text style={style.textStyle}>LICENCIAS</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     )
 }
 
 const style = StyleSheet.create({
     item: {
-        width: 80,
+        width: 100,
+        marginTop: 150,
         height: 130,
         borderRadius: 10,
         backgroundColor: '#FDFDFD',
-        alignItems: 'center',
         justifyContent: 'center',
         margin: 10,
         shadowColor: "#000",
@@ -118,7 +70,6 @@ const style = StyleSheet.create({
         marginTop: 10
     },
     boxStyle: {
-        justifyContent: 'center',
         alignItems: 'center'
     }
 })

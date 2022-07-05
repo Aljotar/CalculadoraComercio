@@ -15,7 +15,7 @@ export const Principal = () => {
             <View style={style.animacionStyle}>
                 <Text style={style.homeText}>EMPELADO DE COMERCIO</Text>
                 <Text style={{ fontWeight: '600', marginTop: 5, color: '#727BFE' }}>¡Informacion relevante para trabajadores de comercio!</Text>
-                <LottieView style={{ width: 250 }}
+                <LottieView style={{ width: 250, marginTop: 30 }}
                     source={require('../assets/lottie/workHome.json')}
                     autoPlay
 
