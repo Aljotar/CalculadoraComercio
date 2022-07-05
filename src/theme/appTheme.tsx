@@ -28,7 +28,7 @@ export const style = StyleSheet.create({
 
     },
     homeText: {
-        fontSize: 17,
+        fontSize: 16,
         fontWeight: 'bold',
         color: '#313131',
     },

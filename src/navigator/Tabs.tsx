@@ -35,16 +35,16 @@ export const Tabs = () => {
         tabBarActiveTintColor: '#726EFF',
         tabBarInactiveTintColor: 'gray',
         tabBarIconStyle: {
-            marginTop: 5
+            marginTop: 1
         },
         headerShown: false,
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 10,
           fontWeight: '600',
           padding: 5
         },
         tabBarStyle: {
-          height: 60,
+          height: 50,
           backgroundColor: '#EDEDED'
         },
         

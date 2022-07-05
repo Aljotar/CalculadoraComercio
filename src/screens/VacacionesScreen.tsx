@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     color: '#434343',
   },
   container2: {
-    height: 160,
+    height: 190,
     backgroundColor: '#FFFFFF',
     marginLeft: 10,
     marginRight: 10,

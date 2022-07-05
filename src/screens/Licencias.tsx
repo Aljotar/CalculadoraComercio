@@ -59,7 +59,7 @@ export const Licencias = () => {
 
 const styles = StyleSheet.create({
     container1: {
-        height: 680,
+        height: 695,
         width: 350,
         backgroundColor: '#F5F5F5',
         alignSelf: 'center',

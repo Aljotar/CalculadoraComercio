@@ -23,6 +23,7 @@ export const ItemsHome = () => {
                 </View>
             </TouchableOpacity>
             <TouchableOpacity
+                onPress={() => navigation.navigate('Escala')}
                 style={style.item}
             >
                 <View style={style.boxStyle}>
