@@ -37,9 +37,6 @@ export const VacacionesScreen = () => {
     const resultado = dateDifference(fechaMedicion, fechaIngreso);
 
     setVacaciones(resultado);
-
-
-
   }
 
   const VacacionesPorAntiguedad = () => {
@@ -53,9 +50,16 @@ export const VacacionesScreen = () => {
     } else if (vacaciones < 20 && vacaciones > 10) {
       return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 28 DIAS DE VACACIONES</Text>
 
-    } else ( vacaciones > 20)
-    return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 35 DIAS DE VACACIONES</Text>
+    } else if (vacaciones > 20) {
+      return <Text style={styles.cantVacaciones} >ESTE AÑO TIENES 35 DIAS DE VACACIONES</Text>
+    } else (vacaciones === 0) 
+    return
+
+
   }
+  setTimeout(() => {
+    setVacaciones(0)
+  }, 10000);
 
   function dateDifference(date2: Date, date1: Date): number {
     const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
