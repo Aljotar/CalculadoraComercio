@@ -59,7 +59,7 @@ export const VacacionesScreen = () => {
   }
   setTimeout(() => {
     setVacaciones(0)
-  }, 10000);
+  }, 20000);
 
   function dateDifference(date2: Date, date1: Date): number {
     const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
@@ -115,7 +115,7 @@ export const VacacionesScreen = () => {
         <Text style={styles.custStyle}><Icon
           name="remove-outline" size={14} color="#6E6AF9" /> La fecha de iniciación de las vacaciones deberá ser comunicada por escrito, con una anticipación no menor de cuarenta y cinco (45) días al trabajador</Text>
         <Text style={styles.custStyle}><Icon
-          name="remove-outline" size={14} color="#6E6AF9" /> Cuando las vacaciones no se otorguen en forma simultánea a todos los trabajadores, el empleador deberá proceder en forma tal para que a cada trabajador le corresponda el goce de éstas por lo menos en una temporada de verano cada tres períodos.</Text>
+          name="remove-outline" size={14} color="#6E6AF9" /> Cuando las vacaciones no se otorguen en forma simultánea a todos los trabajadores, el empleador procederá de tal manera que le corresponda el goce de éstas por lo menos en una temporada de verano cada tres períodos.</Text>
         <Text style={styles.custStyle}><Icon
           name="remove-outline" size={14} color="#6E6AF9" /> Cuando el trabajador no llegase a totalizar el tiempo mínimo( prestar servicios durante la mitad del año vigente) gozará de un período, en proporción de un (1) día de descanso por cada veinte (20) días de trabajo efectivo</Text>
         <Text style={styles.custStyle}><Icon
