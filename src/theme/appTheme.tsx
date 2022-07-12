@@ -18,7 +18,7 @@ export const style = StyleSheet.create({
     },
     itemsStyle: {
         position: 'absolute',
-        top: 370,
+        top: 300,
         alignItems: 'center',
         alignSelf: 'center'
     },

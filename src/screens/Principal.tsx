@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
+
+import SplashScreen from 'react-native-splash-screen';
+
 import LottieView from 'lottie-react-native';
 import { ItemsHome } from '../components/ItemsHome';
 import { style } from '../theme/appTheme';
-import LinearGradient from 'react-native-linear-gradient';
 import { GradientBackground } from '../components/GradientBackground';
 
 
 export const Principal = () => {
+
+    useEffect(() => {
+        SplashScreen.hide();
+    }, [])
+    
+
+
     return (
         <GradientBackground>
             <View style={style.banner}>

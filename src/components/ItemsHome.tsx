@@ -48,9 +48,9 @@ export const ItemsHome = () => {
 
 const style = StyleSheet.create({
     item: {
-        width: 100,
+        width: 80,
         marginTop: 150,
-        height: 130,
+        height: 100,
         borderRadius: 10,
         backgroundColor: '#FDFDFD',
         justifyContent: 'center',
