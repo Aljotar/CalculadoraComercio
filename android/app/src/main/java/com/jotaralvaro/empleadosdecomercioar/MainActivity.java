@@ -1,4 +1,6 @@
-package com.calculadoracomercio;
+//package com.calculadoracomercio;
+
+package com.jotaralvaro.empleadosdecomercioar;
 
 import android.os.Bundle;
 
